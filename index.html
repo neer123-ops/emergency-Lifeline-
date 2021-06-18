@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>
+            Emergency Lifeline App
+        </title>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+ 
+<body class="background">
+    <div class="container">   
+    <center>
+    <h1 style="color: darkblue;"> EMERGENCY LIFELINE APP</h1>    
+    <br>
+    <br>
+    
+    <div class="page-header" id="hospitals">
+        <h2 class="text-capitalize">Name Of Top 5 Hospitals in India</h2>
+    </div>
+
+    <div class="bg-primary movie_head" data-toggle="collapse" data-target="#All_India_Institute_of_Medical_Sciences">
+        <span class="glyphicon glyphicon-film"></span> All India Institute of Medical Sciences<i class="fa fa-sort-desc"></i>
+    </div>
+
+    <div id="All_India_Institute_of_Medical_Sciences" class="collapse">
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <img id = "hospital1" src="hospital1.png" class="img-responsive">
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 movie_text">Public university in New Delhi
+            <h5 class="text-success text-left text-capitalize">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </h5>
+            <p>Address: Sri Aurobindo Marg, Ansari Nagar, Ansari Nagar East, New Delhi, Delhi 110029
+                Hours: 
+                Closed ⋅ Opens 9:30AM Sat
+                Director: Randeep Guleria
+                Phone: 011 2658 8500
+                Founded: 2 June 1956, New Delhi
+                Total enrollment: 841 (2021)
+                Motto: Sharīramādyam khalu dharmasādhanam ("The body is indeed the primary instrument of dharma.")
+                Academic staff: 671
+            </p>
+        </div>
+
+    </div>
+
+    <div class="bg-primary movie_head" data-toggle="collapse" data-target="#Medanta_The_Medicity">
+        <span class="glyphicon glyphicon-film"></span>Medanta The Medicity<i class="fa fa-sort-desc"></i>
+    </div>
+
+    <div id="Medanta_The_Medicity" class="collapse">
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <img id="hospital2" src="hospital2.jpg" class="img-responsive">
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 movie_text">
+            <h5 class="text-success text-left text-capitalize">Hospital in Gurgaon, Haryana
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </h5>
+            <p>Address: CH Baktawar Singh Rd, near Olympus, Medicity, Islampur Colony, Sector 38, Gurugram, Haryana 122001
+                Hours: 
+                Friday	Open 24 hours
+                Saturday	Open 24 hours
+                Sunday	Open 24 hours
+                Monday	Open 24 hours
+                Tuesday	Open 24 hours
+                Wednesday	Open 24 hours
+                Thursday	Open 24 hours
+                Phone: 0124 414 1414
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="bg-primary  movie_head" data-toggle="collapse" data-target="#The_Christian_Medical_College">
+        <span class="glyphicon glyphicon-film"></span>The Christian Medical College<i class="fa fa-sort-desc"></i>
+    </div>
+
+    <div id="The_Christian_Medical_College" class="collapse">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <img src="hospital3.jpg"  id = "hospital3" class="img-responsive">
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 movie_text">
+            <h5 class="text-success text-left text-capitalize">Research institution in Vellore, Tamil Nadu
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </h5>
+            <p>Address: IDA Scudder Rd, Vellore, Tamil Nadu 632004
+                Hours: 
+                Friday	8am–4:30pm
+                Saturday	8am–12pm
+                Sunday	Closed
+                Monday	8am–4:30pm
+                Tuesday	8am–4:30pm
+                Wednesday	8am–4:30pm
+                Thursday	8am–4:30pm
+                Phone: 0416 228 1000
+                Founder: Ida S. Scudder
+                Founded: 1900
+                Motto: Not to be ministered unto, but to minister
+                Affiliation: The Tamil Nadu Dr. M.G.R. Medical University
+                Principal: Alfred Job Daniel
+            </p>
+        </div>
+    </div>
+
+    
+    <div class="bg-primary  movie_head" data-toggle="collapse" data-target="#PGIMER">
+        <span class="glyphicon glyphicon-film"></span>PGIMER - Postgraduate Institute of Medical Education and Research<i class="fa fa-sort-desc"></i>
+    </div>
+
+    <div id="PGIMER" class="collapse">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <img src="hospital4.jpg"  id = "hospital4" class="img-responsive">
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 movie_text">
+            <h5 class="text-success text-left text-capitalize">Public university in Chandigarh
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </h5>
+            <p>Address: Madhya Marg, Sector 12, Chandigarh, 160012
+                Hours: 
+                Friday	9am–5pm
+                Saturday	9am–2pm
+                Sunday	Closed
+                Monday	9am–5pm
+                Tuesday	9am–5pm
+                Wednesday	9am–5pm
+                Thursday	9am–5pm          
+                Phone: 0172 274 7585
+                Founded: 1962
+                Total enrollment: 624 (2021)
+                Dean: Rajesh Kumar (Academics), Arvind Rajwanshi (Research)
+            </p>
+        </div>
+    </div>
+
+    <div class="bg-primary  movie_head" data-toggle="collapse" data-target="#Apollo_Hospital_Chennai">
+        <span class="glyphicon glyphicon-film"></span>Apollo Hospital - Chennai<i class="fa fa-sort-desc"></i>
+    </div>
+
+    <div id="Apollo_Hospital_Chennai" class="collapse">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <img src="hospital5.jpg"  id = "hospital5" class="img-responsive">
+        </div>
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 movie_text">
+            <h5 class="text-success text-left text-capitalize">Hospital in Chennai, Tamil Nadu
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </h5>
+            <p>Address: 21 Greams Lane, Off, Greams Road, Thousand Lights, Chennai, Tamil Nadu 600006
+                Hours: 
+                Friday	Open 24 hours
+                Saturday	Open 24 hours
+                Sunday	Open 24 hours
+                Monday	Open 24 hours
+                Tuesday	Open 24 hours
+                Wednesday	Open 24 hours
+                Thursday	Open 24 hours           
+                Phone: 044 2829 0200
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+<br>
+<br>
+<
+    <br>
+
+
+    <section id="chatbot">
+        <h1>MEDICBOT</h1>
+        <div class="line"></div>
+        <div id="mycarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/52f4b1dc-6e38-4201-8469-4a89f279ad63"></iframe>
+      
+                    <div class="carousel-content">
+                        <p>MEDICBOT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </center>
+    </div>
+
+    <script src="main.js"></script>
+
+    </body>
+</html>
